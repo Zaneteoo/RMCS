@@ -1,0 +1,259 @@
+@charset "ISO-8859-1";
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+/* GENERAL/DEFAULT CSS */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px; 	
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+
+div {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* LOGIN CSS */
+.body-login {
+  color: #fff;
+  font-family: 'Muli', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.container-login {
+  background-color: rgba(0,0,0,0.4);
+  padding: 20px 40px;
+  border-radius: 5px;
+}
+
+.container-login h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container-login a {
+  text-decoration: none;
+  color: lightblue;
+}
+
+.form-submit {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  background: lightblue;
+  padding: 15px;
+  font-family: inherit;
+  font-size: 18px;
+  border: 0;
+  border-radius: 50px;
+}
+
+.form-submit:focus {
+  outline: 0;
+}
+
+.form-submit:active {
+  transform: scale(0.98); 
+}
+
+.text-login {
+  margin-top: 50px;
+}
+
+.form-control-login {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 100%;
+  padding-top: 0;
+}
+
+.form-control-login input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.form-control-login input:focus,
+.form-control-login input:valid {
+  outline: 0;
+}
+
+/* NAVBAR CSS */
+.nav {
+  position: absolute;  
+  background-color: #222;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav .container-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.container-nav {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.nav ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav a:hover {
+  color: #FF0000;
+  font-weight: bold;
+}
+
+/* AUTHOR CSS */
+/* UPLOAD PAPER */
+.body-uploadpaper-author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+/* SYS ADMIN CSS */
+/* CREATE ACC */
+.body-createacc-admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+/* REVIEWER CSS */
+/* LEAVE REVIEW */
+.container-lr{
+  position: relative;
+  width: 600px;
+  padding: 40px 40px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #D3D3D3;
+}
+.container-lr .star-widget input{
+  display: none;
+}
+.star-widget label{
+  font-size: 40px;
+  color: #444;
+  padding: 10px;
+  float: right;
+  transition: all 0.2s ease;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+  color: #000C66;
+}
+input:checked ~ label{
+  color: #000C66;
+}
+.form-lr #rate-1:checked ~ header:before{
+  content: "-3 Strong Reject";
+}
+.form-lr #rate-2:checked ~ header:before{
+  content: "-2 Reject";
+}
+.form-lr #rate-3:checked ~ header:before{
+  content: "-1 Weak Reject";
+}
+.form-lr #rate-4:checked ~ header:before{
+  content: "0 Borderline Paper";
+}
+.form-lr #rate-5:checked ~ header:before{
+  content: "1 Weak Accept";
+}
+.form-lr #rate-6:checked ~ header:before{
+  content: "2 Accept";
+}
+.form-lr #rate-7:checked ~ header:before{
+  content: "3 Strong Accept";
+}
+.form-lr header{
+  width: 100%;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 5px 0 20px 0;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+.form-lr .textarea-lr{
+  height: 200px;
+  width: 100%;
+  overflow: hidden;
+}
+.form-lr .textarea-lr textarea{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #000000;
+  padding: 10px;
+  font-size: 17px;
+  resize: none;
+  border: 1px solid;
+}
+.form-lr .btn-lr{
+  height: 45px;
+  width: 100%;
+  margin: 15px 0;
+}
+.form-lr .btn-lr button{
+  padding:0.6em 2em;
+  border-radius: 8px;
+  background-color: #BFD7ED;
+  font-size:1.1em;
+  border:0;
+  cursor:pointer;
+  margin:1em;
+  width: 400px;
+  justify-content: center;
+}
+.form-lr .btn-lr button:hover{
+  background: #41729F;
+}
